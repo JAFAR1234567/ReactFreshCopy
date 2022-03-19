@@ -1,9 +1,13 @@
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Menubar } from './Components/Shared/Menubar/Menubar';
 function App() {
+  const func = () => {
+    console.log('hello from app.js');
+  }
   return (
     <div>
-      <h1 className='text-center'>Hello React</h1>
+      <Menubar func={func}></Menubar>
     </div>
   );
 }
