@@ -1,13 +1,17 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Menubar } from './Components/Shared/Menubar/Menubar';
+import { useState } from 'react';
+
 function App() {
-  const func = () => {
-    console.log('hello from app.js');
-  }
+  const [add, setAdd] = useState(0)
+ const addFunc = () =>{
+    setAdd(add + 1);
+ }
   return (
     <div>
-      <Menubar func={func}></Menubar>
+      <Menubar add = {add} addFunc={addFunc}></Menubar>
+      
     </div>
   );
 }
